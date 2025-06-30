@@ -35,7 +35,7 @@ jobs:
           ./gradlew updateSHAs
 
       - name: Commit the changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: Updating SHAs
           branch: ${{ github.head_ref }}
@@ -48,7 +48,7 @@ jobs:
           ./gradlew spotlessApply
 
       - name: Commit the changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: Spotless formatting
           branch: ${{ github.head_ref }}
@@ -60,9 +60,10 @@ jobs:
         uses: dangoslen/dependabot-changelog-helper@v4
         with:
           version: 'Unreleased 3.x'
+          sectionHeader: "Maintenance"
 
       - name: Commit the changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "Update changelog"
           branch: ${{ github.head_ref }}
