@@ -30,5 +30,6 @@ public enum Endpoint {
     ALLOWLIST,
     NODESDN,
     SSL,
-    IMPACT_ANALYSIS;
+    IMPACT_ANALYSIS,
+    SIMULATION;
 }
